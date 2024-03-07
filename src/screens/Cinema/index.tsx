@@ -2,8 +2,9 @@ import {Painel} from "./style"
 import {styleContainer} from "../../styles/GlobalStyle"
 import { Text, ImageBackground, Image, View } from 'react-native';
 import {PainelNavegation} from "../../components/PainelNavegation/index"
+import { IPage } from "../../../App";
 
-export function Cinema () {
+export function Cinema ({setPageI}: IPage) {
     const CinemaPNG = require("../../assets/Cinema.png")
     const ClaquetePNG = require("../../assets/Claquete.png")
     return (
@@ -12,7 +13,7 @@ export function Cinema () {
                 <Image source={ClaquetePNG} style={Painel.claquete}/>
                 <Text style={Painel.texto} >FILMES</Text>
             </View>
-            <PainelNavegation/>
+            <PainelNavegation setPageI={setPageI} />
         </ImageBackground>
     )
 }

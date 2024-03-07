@@ -3,8 +3,9 @@ import {Painel} from "./style"
 import {styleContainer} from "../../styles/GlobalStyle"
 import { Text, ImageBackground, Image, View } from 'react-native';
 import {PainelNavegation} from "../../components/PainelNavegation/index"
+import { IPage } from "../../../App";
 
-export function Musica () {
+export function Musica ({setPageI}:IPage) {
     const MusicaPNG = require("../../assets/Musica.png")
     const FonePNG = require("../../assets/Fone.png")
     return (
@@ -13,7 +14,7 @@ export function Musica () {
                 <Image source={FonePNG} style={Painel.fone}/>
                 <Text style={Painel.texto} >MÚSICAS</Text>
             </View>
-            <PainelNavegation/>
+            <PainelNavegation setPageI={setPageI}/>
         </ImageBackground>
     )
 }
