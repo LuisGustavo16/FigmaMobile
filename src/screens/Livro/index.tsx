@@ -5,7 +5,7 @@ import { Text, ImageBackground, Image, View } from 'react-native';
 import {PainelNavegation} from "../../components/PainelNavegation/index"
 import { IPage } from "../../../App";
 
-export function Livro ({setPageI}: IPage) {
+export function Livro ({setPageI, p}: IPage) {
     const LeituraPNG = require("../../assets/Leitura.png")
     const LivroPNG = require("../../assets/Livro.png")
     return (
@@ -14,7 +14,7 @@ export function Livro ({setPageI}: IPage) {
                 <Image source={LivroPNG} style={Painel.livro}/>
                 <Text style={Painel.texto} >LIVROS</Text>
             </View>
-            <PainelNavegation  setPageI={setPageI}/>
+            <PainelNavegation  setPageI={setPageI} p={p}/>
         </ImageBackground>
     )
 }

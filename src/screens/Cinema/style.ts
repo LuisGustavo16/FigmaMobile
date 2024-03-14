@@ -21,4 +21,5 @@ export const Painel = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center"
     }
+
 })
